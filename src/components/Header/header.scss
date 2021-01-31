@@ -21,6 +21,7 @@
     align-items: center;
 
     &__input {
+      margin-left: 20px;
       height: 30px;
       width: 592px;
       border-color: lightgray;
@@ -34,7 +35,7 @@
     }
   }
 
-  &__bla {
+  &__cred {
     display: flex;
     align-items: center;
     justify-content: center;
