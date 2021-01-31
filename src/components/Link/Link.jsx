@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Link as LinkTo } from "react-router-dom";
 
 export default function Link({ url, title }) {
-  return <LinkEl href={url}>{title}</LinkEl>;
+  return <LinkEl to={url}>{title}</LinkEl>;
 }
 
-const LinkEl = styled.a`
+const LinkEl = styled(LinkTo)`
   display: flex;
   margin-right: 10px;
   align-items: center;
@@ -15,7 +16,7 @@ const LinkEl = styled.a`
 
   :active {
     background-color: red;
-    color: black
+    color: black;
   }
 
   :hover {

@@ -6,32 +6,29 @@ import NewReleases from "../NewReleases/NewReleases";
 import TopCharts from "../TopCharts/TopCharts";
 
 export default function Content() {
+  const apps = [{"id":"0", "title": "Pasha Fencer", "rating": "4.5"}, {"id":"2", "title": "FIFA Football", "rating": "3.5"}]
   return (
-    <>
-      <Context>
-        <MenuDiv>Menu will be here</MenuDiv>
-        <ContentDiv>
-          <div
-            style={{ display: "flex", height: 50, backgroundColor: "white" }}
-          >
-            <Link url="/" title="Home" />
-            <Link url="/top" title="Top charts" />
-            <Link url="/new" title="New releases" />
-          </div>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/new">
-              <NewReleases />
-            </Route>
-            <Route path="/top">
-              <TopCharts />
-            </Route>
-          </Switch>
-        </ContentDiv>
-      </Context>
-    </>
+    <Context>
+      <MenuDiv>Menu will be here</MenuDiv>
+      <ContentDiv>
+        <div style={{ display: "flex", height: 50, backgroundColor: "white" }}>
+          <Link url="/" title="Home" />
+          <Link url="/top" title="Top charts" />
+          <Link url="/new" title="New releases" />
+        </div>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/new">
+            <NewReleases />
+          </Route>
+          <Route path="/top">
+            <TopCharts />
+          </Route>
+        </Switch>
+      </ContentDiv>
+    </Context>
   );
 }
 
