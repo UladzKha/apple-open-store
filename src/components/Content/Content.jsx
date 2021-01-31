@@ -6,12 +6,17 @@ import NewReleases from "../NewReleases/NewReleases";
 import TopCharts from "../TopCharts/TopCharts";
 
 export default function Content() {
-  const apps = [{"id":"0", "title": "Pasha Fencer", "rating": "4.5"}, {"id":"2", "title": "FIFA Football", "rating": "3.5"}]
   return (
     <Context>
       <MenuDiv>Menu will be here</MenuDiv>
       <ContentDiv>
-        <div style={{ display: "flex", height: 50, backgroundColor: "white" }}>
+        <div
+          style={{
+            display: "flex",
+            height: 50,
+            backgroundColor: "white",
+          }}
+        >
           <Link url="/" title="Home" />
           <Link url="/top" title="Top charts" />
           <Link url="/new" title="New releases" />
@@ -44,5 +49,5 @@ const MenuDiv = styled.div`
 
 const ContentDiv = styled.div`
   background-color: #f1f1f1;
-  flex: 8;
+  flex: 11;
 `;

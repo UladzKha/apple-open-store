@@ -10,7 +10,7 @@ export default function Home() {
         "https://us-central1-apple-open-store.cloudfunctions.net/getApplications"
       )
       .then(({ data }) => {
-        setApplications(data);
+        setApplications(data.slice(0, 5));
       })
       .catch((error) => console.log(error));
   }, []);
@@ -21,7 +21,31 @@ export default function Home() {
 
   return (
     <>
-      <h1>New and updated apps</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          width: 1000,
+          alignItems: "center",
+        }}
+      >
+        <h1>New and updated apps</h1>
+        <button
+          type="button"
+          style={{
+            backgroundColor: "#689f38",
+            height: 31,
+            width: 85,
+            color: "white",
+            borderRadius: 5,
+            fontWeight: "bold",
+            fontSize: 14,
+            cursor: "pointer",
+          }}
+        >
+          See more
+        </button>
+      </div>
       <div style={{ display: "flex" }}>{renderApplications()}</div>
       <h1>New and updated apps</h1>
     </>

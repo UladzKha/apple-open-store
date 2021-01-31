@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import applicationIcon from "../../assets/play.png";
 import avatar from "../../assets/avatar.png";
@@ -7,7 +8,7 @@ import "./header.scss";
 export default function Header() {
   return (
     <HeaderDiv>
-      <HeaderCredDiv>
+      <HeaderCredDiv to="/">
         <HeaderCredIcon src={applicationIcon} alt="icon" />
         <div>Open Apple Store</div>
       </HeaderCredDiv>
@@ -30,10 +31,12 @@ const HeaderDiv = styled.div`
   justify-content: space-between;
 `;
 
-const HeaderCredDiv = styled.div`
+const HeaderCredDiv = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  color: #5e5959;
 `;
 
 const HeaderCredIcon = styled.img`
@@ -65,6 +68,7 @@ const HeaderAvatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 const HeaderAvatarImg = styled.img`
