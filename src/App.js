@@ -1,12 +1,13 @@
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import Content from "./components/Content/Content";
 import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <>
+    <Router>
       <Header />
       <Content />
-    </>
+    </Router>
   );
 }
 
